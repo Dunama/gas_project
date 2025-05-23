@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sales Section</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='admin_sales.css') }}">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <a class="back-button" href="{{ url_for('login.dashboard') }}">Back</a>
+        <div class="nav-title">Busolas Gas Sales Board</div>
+    </nav>
+    <!-- Sales Section -->
+    <div class="content">
+        <h1>Sales</h1>
+        <!-- Gas Price Input -->
+        <div class="price-container">
+            <span class="price-label"><b>Current Price:</b></span>
+            <span id="gas-price">₦{{ current_price }}</span>
+        </div>
+        <!-- Gas Selection Form -->
+       <form action="{{ url_for('admin_sales.admin_sales_section') }}" method="post">
+    <div class="form-group">
+        <label for="calculation-type" class="input-label">Choose Calculation Type:</label>
+        <select id="calculation-type" name="calculation-type" onchange="showInputField()">
+            <option value="">Select</option>
+            <option value="amount">Amount(₦)</option>
+            <option value="kilogram">Kilogram(KG)</option>
+        </select>
+    </div>
+    <div id="input-field" class="form-group"></div>
+    <div class="action-row">
+        <div class="print-btn-container">
+        </div>
+        <div id="result" style="width: 100%" class="result-inline">
+            {% if amount is not none and kg is not none %}
+                {% if request.form.get('calculation-type') == 'amount' %}
+                    {{ amount }}₦ is {{ kg }} KG
+                {% elif request.form.get('calculation-type') == 'kilogram' %}
+                    {{ kg }} KG is {{ amount }}₦
+                {% endif %}
+            {% endif %}
+            <button type="button" class="print-btn" onclick="window.print()">Print</button>
+        </div>
+    </div>
+</form>
+    </div>
+    <script>
+         function showInputField() {
+            const calculationType = document.getElementById('calculation-type').value;
+            const inputFieldDiv = document.getElementById('input-field');
+            inputFieldDiv.innerHTML = ''; // Clear previous input field
+
+            if (calculationType === 'amount') {
+                inputFieldDiv.innerHTML = `
+                    <label for="amount">Enter Naira:</label>
+                    <input type="text" id="amount" name="amount" placeholder="Enter amount in Naira" oninput="calculateGas()">
+                `;
+            } else if (calculationType === 'kilogram') {
+                inputFieldDiv.innerHTML = `
+                    <label for="kilogram">Enter Kilogram:</label>
+                    <input type="text" id="kilogram" name="kilogram" placeholder="Enter amount in Kilogram" oninput="calculateGas()">
+                `;
+            }
+        }
+    </script>
+</body>
+</html>

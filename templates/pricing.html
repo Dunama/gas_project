@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gas project</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='pricing.css') }}">    
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <a class="back-button" href="{{ url_for('login.dashboard') }}">Back</a>
+        <div class="nav-title">Busolas Gas Sales Board</div>
+    </nav>
+    <!-- Pricing Container -->
+    <div class="pricing-container">
+        <h1><b>PRICING</b></h1>
+        <h2>Set Current Gas Price</h2>
+        <p class="current-price">Current Price: <b>₦{{ current_price }}</b></p>
+        
+        <!-- Error message -->
+        {% if error %}
+        <p style="color: red; margin-bottom: 18px;">{{ error }}</p>
+        {% endif %}
+    
+        <!-- Form to update the gas price -->
+        <form method="POST" action="{{ url_for('pricing.pricing') }}">
+            <input type="text" name="new_price" placeholder="Set Gas Price" required>
+            <button type="submit">Update</button>
+        </form>
+    </div>
+</body>
+</html>

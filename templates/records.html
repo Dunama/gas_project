@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sales History</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='records.css') }}">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <a class="back-button" href="{{ url_for('login.dashboard') }}">Back</a>
+        <div class="nav-title">Busolas Gas Sales Records</div>
+    </nav>
+    
+    <!-- Sales Table -->
+    <div class="content">
+        <h1>Sales History</h1>
+        <table class="sales-table">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Account</th>
+                    <th>KG</th>
+                    <th>Price/KG</th>
+                    <th>Total</th>
+                    <th>Date/Time</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% if sales %}
+                    {% for sale in sales %}
+                    <tr>
+                        <td>{{ sale.id }}</td>
+                        <td>{{ sale.customer_id }}</td>
+                        <td>{{ sale.kg_bought }} KG</td>
+                        <td>₦{{ sale.price_per_kg }}</td>
+                        <td>₦{{ sale.total_amount }}</td>
+                        <td>{{ sale.timestamp }}</td>
+                    </tr>
+                    {% endfor %}
+                {% else %}
+                    <tr>
+                        <td colspan="6" class="no-records">No sales records found</td>
+                    </tr>
+                {% endif %}
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>

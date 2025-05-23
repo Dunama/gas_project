@@ -1,0 +1,134 @@
+/* General styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f9;
+    color: #333;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Navigation bar */
+.navbar {
+    background-color: #0b2545;
+    padding: 16px 24px;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.nav-title {
+    font-size: 1.5rem;
+    font-weight: 600;
+    flex: 1;
+    text-align: center;
+}
+
+.back-button {
+    color: white;
+    text-decoration: none;
+    background-color: #13315c;
+    padding: 8px 16px;
+    border-radius: 4px;
+    font-weight: 500;
+    transition: background-color 0.2s;
+}
+
+.back-button:hover {
+    background-color: #134074;
+}
+
+/* Content area */
+.content {
+    max-width: 1200px;
+    margin: 24px auto;
+    padding: 24px;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+    flex: 1;
+}
+
+.content h1 {
+    color: #0b2545;
+    margin-top: 0;
+    padding-bottom: 16px;
+    border-bottom: 2px solid #eaeaea;
+    font-size: 2rem;
+}
+
+/* Table styles */
+.sales-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 24px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.sales-table th {
+    background-color: #0b2545;
+    color: white;
+    padding: 14px 20px;
+    text-align: left;
+    font-weight: 600;
+}
+
+.sales-table td {
+    padding: 14px 20px;
+    border-bottom: 1px solid #ddd;
+}
+
+.sales-table tr:nth-child(even) {
+    background-color: #f7f7f7;
+}
+
+.sales-table tr:hover {
+    background-color: #f0f7ff;
+}
+
+.no-records {
+    text-align: center;
+    padding: 30px;
+    color: #777;
+    font-style: italic;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .sales-table {
+        font-size: 0.9rem;
+    }
+    
+    .sales-table th, 
+    .sales-table td {
+        padding: 10px 12px;
+    }
+    
+    .content {
+        padding: 16px;
+        margin: 16px;
+    }
+}
+
+/* Print styles - for when users print records */
+@media print {
+    .navbar, .back-button {
+        display: none;
+    }
+    
+    body, .content {
+        background: white;
+        padding: 0;
+        margin: 0;
+        box-shadow: none;
+    }
+    
+    .sales-table th {
+        background-color: #eee;
+        color: black;
+    }
+}

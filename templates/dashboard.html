@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BUSOLA GAS - Dashboard</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='dashboard.css') }}">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <ul class="nav-links">
+            <li><a href="{{ url_for('login.login_form') }}">Home</a></li>
+            <li><a href="{{ url_for('pricing.pricing') }}">Pricing</a></li>
+            <li><a href="{{ url_for('admin_sales.admin_sales_section')}}">Sales</a></li>
+            <li><a href="{{ url_for('records.records')}}">Records</a></li>
+        </ul>
+    </nav>
+
+    <!-- Dashboard Content -->
+    <div class="dashboard-container">
+        <h1 class="dashboard-title">Busolas Gas Dashboard</h1>
+        <div class="dashboard-card">
+            <div class="card-item">
+                <div class="card-text">
+                    <h2>Gas Price</h2>
+                    <img src="{{ url_for('static', filename='images/gas_tanks.png') }}" alt="Gas Tanks" class="gas-tanks">
+                </div>
+            </div>
+            <div class="card-item">
+                <h2>Sales</h2>
+                <img src="{{ url_for('static', filename='images/gasDespenser.png') }}" alt="Gas Dispenser" class="gas-dispenser">
+            </div>
+            <div class="card-item">
+                <h2>Records</h2>
+                <img src="{{ url_for('static', filename='images/barchart.png') }}" alt="Sales Chart" class="sales-chart">
+            </div>
+        </div>
+    </div>
+</body>
+</html>

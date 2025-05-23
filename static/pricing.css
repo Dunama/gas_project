@@ -1,0 +1,150 @@
+body {
+    background-color: #f4f4f9;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #222;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;  /* Stack children vertically */
+}
+
+/* Navigation Bar */
+.navbar {
+    background-color: #0b2545;
+    color: #fff;
+    padding: 16px 32px;
+    display: flex;
+    align-items: center;
+}
+
+.back-button {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    background: #1e90ff;
+    padding: 8px 16px;
+    border-radius: 4px;
+    transition: background 0.2s;
+    border: none;
+    font-size: 1rem;
+    float: left;    
+}
+
+
+.back-button:hover {
+    background: #1565c0;
+}
+
+.nav-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    letter-spacing: 1px;
+    text-align: center;
+    font-weight: 700;
+    flex: 1;
+    margin-right: 8%;
+}
+
+
+/* ...existing code... */
+.pricing-container {
+    background-color: white;
+    padding: 32px 32px 40px 32px;     /* Increased padding for more space */
+    border-radius: 20px;              /* Slightly more rounded corners */
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.12); /* Deeper shadow for emphasis */
+    text-align: center;
+    width: 520px;                     /* Increased width */
+    height: 25%;                /* Increased height */
+    margin: 10px auto;               /* More space around the container */
+}
+/* ...existing code... */
+
+/* Headings */
+.pricing-container h1 {
+    font-size: 2.8rem;
+    color: #111;
+    margin-top: 25px;
+
+    letter-spacing: 1px;
+}
+
+.pricing-container h2 {
+    font-size: 2rem;
+    color: #222;
+    margin-bottom: 32px;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+    margin-top: 10px;
+}
+
+/* Current Price */
+.current-price {
+    font-size: 1.5rem;
+    color: #222;
+    margin-bottom: 36px;
+}
+.current-price b {
+    display: block;
+    font-size: 2.5rem;
+    color: #111;
+    margin-top: 8px;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+/* Input Field */
+.pricing-container input[type="text"] {
+    width: 90%;
+    padding: 20px 18px;
+    margin-bottom: 32px;
+    border: 1.5px solid #d3d3d3;
+    border-radius: 10px;
+    font-size: 1.25rem;
+    background: #fafbfc;
+    color: #222;
+    box-sizing: border-box;
+    transition: border-color 0.2s;
+}
+.pricing-container input[type="text"]:focus {
+    border-color: #007bff;
+    outline: none;
+}
+
+/* Update Button */
+.pricing-container button {
+    background: linear-gradient(90deg, #2072ff 0%, #007bff 100%);
+    color: #fff;
+    border: none;
+    padding: 20px 0;
+    border-radius: 10px;
+    font-size: 1.35rem;
+    font-weight: bold;
+    width: 90%;
+    cursor: pointer;
+    transition: background 0.2s, color 0.2s;
+    margin-top: 8px;
+    letter-spacing: 0.5px;
+}
+.pricing-container button:hover {
+    background: linear-gradient(90deg, #0056b3 0%, #2072ff 100%);
+    color: #e6e6e6;
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+    .pricing-container {
+        width: 98vw;
+        min-width: unset;
+        padding: 32px 8vw 32px 8vw;
+    }
+    .pricing-container h1 {
+        font-size: 2rem;
+    }
+    .pricing-container h2 {
+        font-size: 1.2rem;
+    }
+    .current-price b {
+        font-size: 1.5rem;
+    }
+}

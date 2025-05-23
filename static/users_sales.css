@@ -1,0 +1,176 @@
+/* General body styling */
+body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background-color: #f4f8fb;
+    margin: 0;
+    padding: 0;
+}
+
+/* Navigation Bar */
+.navbar {
+    background-color: #0b2545;
+    color: #fff;
+    padding: 16px 32px;
+    display: flex;
+    align-items: center;
+    
+}
+
+.back-button {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    background: #1e90ff;
+    padding: 8px 16px;
+    border-radius: 4px;
+    transition: background 0.2s;
+    border: none;
+    font-size: 1rem;
+    float: left;
+    
+}
+
+.back-button:hover {
+    background: #1565c0;
+}
+
+.nav-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    letter-spacing: 1px;
+    text-align: center;
+    font-weight: 700;
+    flex: 1;
+    margin-right: 8%;
+}
+
+/* Content Section */
+.content {
+    max-width: 500px;
+    margin: 40px auto;
+    background: #fff;
+    border-radius: 14px;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+    padding: 36px 28px 32px 28px;
+}
+
+h1 {
+    text-align: center;
+    color: #0b2545;
+    margin-bottom: 28px;
+    font-size: 2.1rem;
+    font-weight: 700;
+}
+
+/* Price Container */
+.price-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 28px;
+    background: #e3f2fd;
+    padding: 14px 22px;
+    border-radius: 8px;
+}
+
+.price-label {
+    font-size: 1.08rem;
+    color: #0b2545;
+}
+
+#gas-price {
+    font-size: 1.25rem;
+    font-weight: bold;
+    color: #0b2545;
+}
+
+/* Form Group */
+.form-group {
+    margin-bottom: 18px;
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+}
+
+/* Input Label Styling */
+.input-label {
+    color: #0b2545;
+    font-weight: 500;
+    font-size: 1rem;
+}
+
+/* Select Styling */
+select {
+    padding: 9px 12px;
+    border-radius: 4px;
+    border: 1px solid #b0bec5;
+    font-size: 1rem;
+    outline: none;
+    background: #f8fafc;
+    color: #0b2545;
+    width: 100%;
+    transition: border-color 0.2s;
+}
+
+select:focus {
+    border-color: #1e90ff;
+}
+
+/* Input Field Styling */
+#input-field input[type="text"] {
+    width: 95%;
+    padding: 12px 12px;
+    border: 1px solid #b0bec5;
+    border-radius: 4px;
+    font-size: 1rem;
+    background: #f8fafc;
+    color: #0b2545;
+    transition: border-color 0.2s;
+}
+
+#input-field input[type="text"]:focus {
+    border-color: #1e90ff;
+}
+
+/* Action Row: Print button left, result right */
+.action-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 18px;
+    gap: 16px;
+}
+
+
+.print-btn, button[type="button"] {
+    background-color: #0b2545;
+    color: #fff;
+    border: none;
+    padding: 10px 28px;
+    border-radius: 5px;
+    font-size: 1rem;
+    margin-top: 20px;
+    margin-left: 80%;
+    cursor: pointer;
+    text-align: end;
+    transition: background-color 0.3s;
+    font-weight: 500;
+}
+
+.print-btn:hover, button[type="button"]:hover {
+    background-color: #1565c0;
+}
+
+.result-inline {
+    justify-content: space-between;
+    text-align: left;
+    background: #e3f2fd;
+    border-radius: 6px;
+    color: #0b2545;
+    font-size: 1.08rem;
+    font-weight: 500;
+    min-height: 32px;
+    padding: 10px 16px;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.04);
+    width: 100%; 
+}

@@ -1,0 +1,79 @@
+/* Global Styles */
+body {
+    background-color: #32323292;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    min-height: 100vh;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    color: white; 
+}
+
+a {
+    color: #fff;
+    text-decoration: underline;
+    padding-top: 20px;
+    text-align: center;
+    font-size: 20px;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5px;
+    padding: 20px;
+}
+
+.calculation-request {
+    background-color: #323232; /* Light shade of red with transparency */
+    padding: 20px;
+    border-radius: 5%;
+    width: 300px; /* Set a fixed width for the calculation request div */
+    text-align: center; /* Center align the content inside the div */
+}
+
+img{
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    padding-bottom: 5px;
+    
+}
+label {
+    display: block;
+    margin-bottom: 10px;
+    font-size: 18px;
+}
+
+select, input[type="text"] {
+    width: 90%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+button {
+    background-color: #930000;
+    color: #fffb05;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 18px;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #ffcc00;
+    color: #930000;
+}
+
+#result {
+    font-size: 30px; /* Increase the font size of the result */
+    font-weight: bold;
+}

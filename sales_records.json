@@ -1,0 +1,10 @@
+[
+  {
+    "id": "SALE-1",
+    "customer_id": "admin",
+    "price_per_kg": 200.0,
+    "kg_bought": 5000.0,
+    "total_amount": 25.0,
+    "timestamp": "2025-05-24 13:58:49"
+  }
+]
